@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="user-view">
+        <h1>Listado de productos</h1>
+        <div id="product-list"></div>
+    </div>
+
+    <div id="overlay">
+    </div>
+
+    <div class="edit-product">
+        <h2>Editar Producto</h2>
+        <form id="edit-form">
+            <input type="hidden" id="edit-product-id">
+            <input type="text" id="edit-product-name" placeholder="Nuevo nombre del producto" required>
+            <input type="number" id="edit-product-price" placeholder="Nuevo precio" required>
+            <input type="number" id="edit-product-quantity" placeholder="Cantidad" required>
+            <button type="submit">Guardar Cambios</button>
+            <button onclick="closeEditModal()">Cancelar</button>
+        </form>
+    </div>
+
+
+    <div class="user-view">
+        <h2>Carrito</h2>
+        <div id="cart"></div>
+        <button id="btncompra" class="button-realizar-compra" onclick="realizarCompra()">Realizar Compra</button>
+    </div>
+
+
+    <div class="admin-view">
+        <h2>Panel de Administrador</h2>
+        <form id="admin-form">
+            <input type="text" id="product-name" placeholder="Nombre del producto" required>
+            <input type="number" id="product-price" placeholder="Precio" required>
+            <input type="number" id="product-quantity" placeholder="Cantidad" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <div id="admin-product-list"></div>
+    </div>
+
+    <section class="authors">
+        <h2>Autores</h2>
+        <ul>
+            <li>JOSEPLHINE ANDREA CASTILLO MOSCOSO - joseplhine.castillo@uees.edu.ec</li>
+            <li>OSCAR FELIPE CABRERA ROBALINO - oscar.cabrera@uees.edu.ec</li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
